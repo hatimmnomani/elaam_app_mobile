@@ -1,0 +1,26 @@
+import * as React from 'react';
+import Svg, {Defs, Image, Use} from 'react-native-svg';
+/* SVGR has dropped some elements not supported by react-native-svg: style */
+
+function Reward(props) {
+  return (
+    <Svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 101 25"
+      width={101}
+      height={25}
+      {...props}>
+      <Defs>
+        <Image
+          width={props.width ?? 101}
+          height={props.height ?? 25}
+          id="img1"
+          href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGUAAAAZCAMAAAAfQhBHAAAAAXNSR0IB2cksfwAAAspQTFRFVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCVzgCwEtgDwAAAO50Uk5TACaKxdGOEwNRdDIbyP/6ztNGae0BDAhtbAUJCwI/QkrD72fcyVh3QAQWODYnLjxFSVRkhX0wCjlXWTQhHl0vkoYSGaXXeijsq1vA57iDByJSS4t8QzU9RLW+sGEG5JtIqOhu7v4t/evHgk8qMzp4HWqz4BExl/faTD665di7n2YaGNLpexQrDSkktIjW8830+KlaII2akUfx4tTBt6CZjHlwc3a9y+rmoV+i2/me3/IQTq+sj8K5kIAcO2Ph/GiVk171VWIPtvBN3jf7UKPdz2C8DnGBI3WuqtlBp8T21ReEh78flhXQZYlWLLJrsTC1v1EAAASqSURBVHicrVb7I9VnGH+OykEeE8ftOBzkcs5YwlyWeyWjOYijrY7bcdsSCgkhS6jY3EUmqS0hy7Gaksu6GJu0ZtXWRbWkXfsf9r7fQxhDzfPD+X6/7/t5Pp/nfZ/nfd4DMMtYCsuWr1CcPb4IYyspKKssCrlSFdXeUF/1WioaiKipwZkfpKVNfnQQdfW4+v+e47EXoWJgyDdCY9Z8EI7JalMzAHNEC/mAQMh609KKxXprjfVaG1tlu7ftp6EdHJ3eWbXO2UWoPZPFFVEJwM3dw3NulfUbNiJ6wSZvfJdB+PhuRlR7z8/GgqXP0dMT+QfYuQomwYFbgsyCxeJ14pCtPiveN/pgm992JpWSDbjZHwJCEcMEM9g9FUXMk80WhUdEevGkUdGqtsEx/FiM+/AjCzrnvyNeDnXaOeGTkJjEPBUlACLxrt3JJCERHEhJ3YOxQWCTttcuPUQyTSMjc19kVnbO/oRc5vNjXTH4ERdMC/WVOlOewD0H8g5yId++gAdQqH+IgkSHJ7wtjuzeTyPQNigq/kT107gSLLUF67JyedxQkaFbWVV9VAK+lLKm9ljdZ/XHG040njz1+RenEZvONFOJil0trYhnlcCx7cvSc1XEt92HB1oyugLzjq/ObwWrC1jzdWd4OwBXfDH7LGKpn65URXjJv+uyQltmNyXHnl7ow+5vDF0cOIL8GGsjZhDzyq7QhR2WHvGmn1evwfUa+mKcT1R09EBoQurNgI5Eu7P7mTBbO2X9xKUg8dsBCvSOizIKOzVo0cX3avkOMQjcfL9/uXt2xM+4TlrBrCKzZFnlEGVogxtDWGtuodtRSE7TdoCURi7JzOmODXsRh0Ws00xomjfDbpB5SLX7gfHqnSR1PrOP1KbWVI6E5bf4FWT3C6Q/dlOCEAofOCQyxZs07SNkSoVUOe9WCkB/BqnKqh78CW5T1Lk729OwuE1GlisJuftz3S/xL1kduuYoaLZGJrM/9/LhfmlyNj4AqzTCBRkGdDKYxusWw1Q+ITDFh3oraYGNJsFl6rWxykxI5vTmIJ5h2hHMDjyyJq+OjxuxEmKGcC1Y16TTXLlBQQBHZEjSz3lSrwVFGKoIF/DkRQ8JiDrkaf11IQXGJNZFOQ3p8nbpmYw58LgJpRBUQpitrEDkWxoMIzEk/6nR96ETD4h4y7CBAWuZP42MKq4eW5TKdIsfxYc88MAmwwBMlPlsIhsXi88Axo9aOtgma1Wsxi3ALcbnk20v907hK2sA6Jeh2m8ch4NZJaNXjXRyycgg4nHgQbvT76G1p1qx4xJci8VtgoWI5rfxnMh7JO0jO9OZTstpzO7BR8P+NABZ31P3QQ5YauJy+wVYFrakMXmtK8o0Asehi5yOnj8gn68hm7jo/jxx/T/a76tb+/mm5PrbDa6QPoTKYLbFr009r298qdgnjDuMyCfno9kJHhzTDzchyxOTLjzrrvt/ZohXWiLIMQSDsQTb9fTk5D9T/wvDl1ZlBwaOuI6QFsN2EQiEpKK42s2FfLRZWhUr76wublfR1MV0dw1X5XnaoaVVgb8HME+zd+q7uSYSe8yXWATA8smLy9P/ApW/qE5YtPM/899N265gOMEAAAAASUVORK5CYII="
+        />
+      </Defs>
+      <Use id="Background" href="#img1" x={0} y={0} />
+    </Svg>
+  );
+}
+
+export default Reward;

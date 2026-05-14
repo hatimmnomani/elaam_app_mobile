@@ -1,0 +1,432 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Welcome Screen Component should WELCOME Text is available 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+  testID="WelcomeScreenAvil"
+>
+  <View
+    collapsable={false}
+    nativeID="animatedComponent"
+    onLayout={[Function]}
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "transform": Array [
+          Object {
+            "translateY": -65,
+          },
+        ],
+        "zIndex": 3000,
+      }
+    }
+    testID="animatedView"
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={false}
+      nativeID="animatedComponent"
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#FFF",
+          "borderLeftColor": "#69C779",
+          "borderLeftWidth": 5,
+          "borderRadius": 6,
+          "elevation": 2,
+          "flexDirection": "row",
+          "height": 60,
+          "opacity": 1,
+          "shadowOffset": Object {
+            "height": 0,
+            "width": 0,
+          },
+          "shadowOpacity": 0.1,
+          "shadowRadius": 6,
+          "width": "90%",
+        }
+      }
+      testID="rootView"
+    >
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={false}
+        nativeID="animatedComponent"
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+            "opacity": 1,
+            "width": 50,
+          }
+        }
+        testID="leadingIcon"
+      >
+        <Image
+          resizeMode="contain"
+          source={
+            Object {
+              "testUri": "../../react-native-toast-message/src/assets/icons/success.png",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "height": 16,
+                "width": 16,
+              },
+              Object {
+                "height": 20,
+                "width": 20,
+              },
+            ]
+          }
+          testID="icon"
+        />
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "flex-start",
+              "flex": 1,
+              "justifyContent": "center",
+            },
+            undefined,
+          ]
+        }
+        testID="contentContainer"
+      />
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        nativeID="animatedComponent"
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+            "opacity": 1,
+            "width": 40,
+          }
+        }
+        testID="trailingIcon"
+      >
+        <Image
+          resizeMode="contain"
+          source={
+            Object {
+              "testUri": "../../react-native-toast-message/src/assets/icons/close.png",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "height": 16,
+                "width": 16,
+              },
+              Object {
+                "height": 9,
+                "width": 9,
+              },
+            ]
+          }
+          testID="icon"
+        />
+      </View>
+    </View>
+  </View>
+  <BVLinearGradient
+    colors={
+      Array [
+        4290787083,
+        4286849024,
+      ]
+    }
+    endPoint={
+      Object {
+        "x": 0.5,
+        "y": 1,
+      }
+    }
+    locations={null}
+    startPoint={
+      Object {
+        "x": 0.5,
+        "y": 0,
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "position": "absolute",
+        }
+      }
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../App/assets/images/Elaam_Icons/pattern.png",
+          }
+        }
+        style={
+          Object {
+            "height": 1600.8,
+            "width": 750,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "marginBottom": 26,
+          "marginTop": 90,
+        }
+      }
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../App/assets/images/Elaam-logo.png",
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#85290b",
+          "marginHorizontal": 20,
+          "paddingHorizontal": 50,
+          "paddingVertical": 45,
+        }
+      }
+    >
+      <View>
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 25,
+              "fontWeight": "bold",
+              "textAlign": "center",
+            }
+          }
+        >
+          WELCOME !
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": 25,
+              "fontWeight": "bold",
+              "marginBottom": 35,
+              "textAlign": "center",
+            }
+          }
+        >
+          ELAAM
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          accessibilityLabel="Move DashboardBtn"
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "borderColor": "#e3e3e3",
+              "borderRadius": 30,
+              "borderWidth": 1,
+              "flexDirection": "row",
+              "height": 40,
+              "marginHorizontal": 10,
+              "marginVertical": 5,
+              "overflow": "hidden",
+            }
+          }
+          testID="moveDashboard"
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#fef9bd",
+                "borderRightColor": "#bdc6cf",
+                "borderRightWidth": 1,
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityState={
+                Object {
+                  "disabled": false,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              nativeID="animatedComponent"
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "flex": 1,
+                  "opacity": 1,
+                }
+              }
+              testID="buttonGroupItem"
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flex": 1,
+                    "justifyContent": "center",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#000",
+                      "fontSize": 15,
+                      "fontWeight": "bold",
+                    }
+                  }
+                  testID="buttonGroupItemText"
+                >
+                  Mumin
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "#fef9bd",
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              accessibilityState={
+                Object {
+                  "disabled": false,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              nativeID="animatedComponent"
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "flex": 1,
+                  "opacity": 1,
+                }
+              }
+              testID="buttonGroupItem"
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flex": 1,
+                    "justifyContent": "center",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#000",
+                      "fontSize": 15,
+                      "fontWeight": "bold",
+                    }
+                  }
+                  testID="buttonGroupItemText"
+                >
+                  Approver
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </BVLinearGradient>
+</View>
+`;

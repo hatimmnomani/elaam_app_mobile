@@ -1,0 +1,13 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "App/quiz/assets/fonts/AlKanz.ttf",
+      "sha1": "ced746c21ffee9b6ef02056988be1cca0225084d"
+    },
+    {
+      "path": "App/quiz/assets/fonts/fatemiregular.ttf",
+      "sha1": "37044ac6183a1631d75a731fad1e4774191745d5"
+    }
+  ]
+}

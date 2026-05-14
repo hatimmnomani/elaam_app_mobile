@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "191127990737",
+    "project_id": "elaam-1cf3c",
+    "storage_bucket": "elaam-1cf3c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191127990737:android:71c5d5ca4cc4b8d8e070f0",
+        "android_client_info": {
+          "package_name": "com.elaam.niyat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "191127990737-h1rh35otc72dskpjqr43fosovf0r5j79.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.elaam.niyat",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "191127990737-38o7g69b7rd6kve4ftt7eccdpie06l6v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_3Z5AmvFscxA3hPVV8oHEPynPSN16Y5k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "191127990737-38o7g69b7rd6kve4ftt7eccdpie06l6v.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "191127990737-lg6kmt9iakehhfbm3jvmnke5f5viq3d7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.ELAAM"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

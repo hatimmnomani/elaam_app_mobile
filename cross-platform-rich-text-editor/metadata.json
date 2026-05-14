@@ -1,0 +1,5 @@
+{
+  "name": "Cross-Platform Rich Text Editor",
+  "description": "A React web application demonstrating a block-based rich text editor that generates a structured JSON model, with a live preview modal to show how the content would render in a separate environment.",
+  "requestFramePermissions": []
+}

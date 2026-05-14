@@ -1,0 +1,51 @@
+diff --git a/node_modules/react-native/scripts/.packager.env b/node_modules/react-native/scripts/.packager.env
+new file mode 100644
+index 0000000..361f5fb
+--- /dev/null
++++ b/node_modules/react-native/scripts/.packager.env
+@@ -0,0 +1 @@
++export RCT_METRO_PORT=8081
+diff --git a/node_modules/react-native/scripts/cocoapods/new_architecture.rb b/node_modules/react-native/scripts/cocoapods/new_architecture.rb
+index 71ba870..76b0983 100644
+--- a/node_modules/react-native/scripts/cocoapods/new_architecture.rb
++++ b/node_modules/react-native/scripts/cocoapods/new_architecture.rb
+@@ -84,6 +84,7 @@ class NewArchitectureHelper
+             ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "React-graphics", "React_graphics", ["react/renderer/graphics/platform/ios"])
+                 .concat(ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "React-Fabric", "React_Fabric", ["react/renderer/components/view/platform/cxx"]))
+                 .concat(ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "React-FabricImage", "React_FabricImage", []))
++                .concat(ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "React-runtimeexecutor", "React_runtimeexecutor", ["platform/ios"]))
+                 .concat(ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "ReactCommon", "ReactCommon", ["react/nativemodule/core"]))
+                 .concat(ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "React-NativeModulesApple", "React_NativeModulesApple", []))
+                 .concat(ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "React-RCTFabric", "RCTFabric", []))
+diff --git a/node_modules/react-native/scripts/cocoapods/utils.rb b/node_modules/react-native/scripts/cocoapods/utils.rb
+index 2cd7ef4..d012619 100644
+--- a/node_modules/react-native/scripts/cocoapods/utils.rb
++++ b/node_modules/react-native/scripts/cocoapods/utils.rb
+@@ -314,6 +314,7 @@ class ReactNativePodsUtils
+ 
+                 ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "ReactCommon", "ReactCommon", ["react/nativemodule/core"])
+                     .concat(ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "ReactCommon-Samples", "ReactCommon_Samples", ["platform/ios"]))
++                    .concat(ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "React-runtimeexecutor", "React_runtimeexecutor", ["platform/ios"]))
+                     .concat(ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "React-Fabric", "React_Fabric", ["react/renderer/components/view/platform/cxx"], false))
+                     .concat(ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "React-NativeModulesApple", "React_NativeModulesApple", []))
+                     .concat(ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "React-graphics", "React_graphics", ["react/renderer/graphics/platform/ios"]))
+@@ -572,6 +573,7 @@ class ReactNativePodsUtils
+             .concat(ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "React-Fabric", "React_Fabric", ["react/renderer/components/view/platform/cxx"]))
+             .concat(ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "React-FabricImage", "React_FabricImage", []))
+             .concat(ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "React-Graphics", "React_graphics", ["react/renderer/graphics/platform/ios"]))
++            .concat(ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "React-runtimeexecutor", "React_runtimeexecutor", ["platform/ios"]))
+             .map { |search_path| "\"#{search_path}\"" }
+ 
+         ReactNativePodsUtils.update_header_paths_if_depends_on(target_installation_result, "React-RCTFabric", header_search_paths)
+diff --git a/node_modules/react-native/scripts/codegen/templates/ReactCodegen.podspec.template b/node_modules/react-native/scripts/codegen/templates/ReactCodegen.podspec.template
+index 34cf8a7..de434d4 100644
+--- a/node_modules/react-native/scripts/codegen/templates/ReactCodegen.podspec.template
++++ b/node_modules/react-native/scripts/codegen/templates/ReactCodegen.podspec.template
+@@ -33,6 +33,7 @@ if use_frameworks
+     .concat(ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "React-FabricImage", "React_FabricImage", []))
+     .concat(ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "React-graphics", "React_graphics", ["react/renderer/graphics/platform/ios"]))
+     .concat(ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "ReactCommon", "ReactCommon", ["react/nativemodule/core"]))
++    .concat(ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "React-runtimeexecutor", "React_runtimeexecutor", ["platform/ios"]))
+     .concat(ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "React-NativeModulesApple", "React_NativeModulesApple", []))
+     .concat(ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "React-RCTFabric", "RCTFabric", []))
+     .concat(ReactNativePodsUtils.create_header_search_path_for_frameworks("PODS_CONFIGURATION_BUILD_DIR", "React-debug", "React_debug", []))

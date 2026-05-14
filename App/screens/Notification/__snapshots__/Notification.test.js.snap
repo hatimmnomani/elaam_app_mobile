@@ -1,0 +1,612 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Welcome Screen Component should Notification Text is available 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fcf9e5",
+      "flex": 1,
+      "width": "100%",
+    }
+  }
+>
+  <View>
+    <RCTSafeAreaView
+      emulateUnlessSupported={true}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fcf9e5",
+            "elevation": 4,
+            "zIndex": 0,
+          },
+          Object {
+            "shadowColor": "#000000",
+            "shadowOffset": Object {
+              "height": 3,
+              "width": 0,
+            },
+            "shadowOpacity": 0.24,
+            "shadowRadius": 4,
+          },
+        ]
+      }
+    >
+      <View
+        collapsable={false}
+        nativeID="animatedComponent"
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fcf9e5",
+            "elevation": 0,
+            "flexDirection": "row",
+            "height": 56,
+            "marginTop": 0,
+            "paddingHorizontal": 4,
+          }
+        }
+      >
+        <View
+          accessibilityRole="button"
+          accessibilityState={
+            Object {
+              "disabled": false,
+            }
+          }
+          accessible={true}
+          focusable={true}
+          hitSlop={
+            Object {
+              "bottom": 6,
+              "left": 6,
+              "right": 6,
+              "top": 6,
+            }
+          }
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "overflow": "hidden",
+              },
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "margin": 6,
+                  "overflow": "hidden",
+                },
+                Object {
+                  "borderRadius": 18,
+                  "height": 36,
+                  "width": 36,
+                },
+                undefined,
+                undefined,
+              ],
+            ]
+          }
+        >
+          <View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "justifyContent": "center",
+                  },
+                  Object {
+                    "height": 24,
+                    "width": 24,
+                  },
+                ]
+              }
+            >
+              <View
+                collapsable={false}
+                nativeID="animatedComponent"
+                style={
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "opacity": 1,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "transform": Array [
+                      Object {
+                        "rotate": "0deg",
+                      },
+                    ],
+                  }
+                }
+              >
+                <Text
+                  accessibilityElementsHidden={true}
+                  allowFontScaling={false}
+                  importantForAccessibility="no-hide-descendants"
+                  pointerEvents="none"
+                  selectable={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#b73109",
+                        "fontSize": 24,
+                      },
+                      Array [
+                        Object {
+                          "lineHeight": 24,
+                          "transform": Array [
+                            Object {
+                              "scaleX": 1,
+                            },
+                          ],
+                        },
+                        Object {
+                          "backgroundColor": "transparent",
+                        },
+                      ],
+                      Object {
+                        "fontFamily": "Material Design Icons",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  󰍜
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        />
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "marginRight": 15,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#573802",
+                "fontSize": 20,
+                "fontWeight": "500",
+              }
+            }
+          >
+            Mumin Dashboard
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            accessibilityRole="button"
+            accessibilityState={
+              Object {
+                "disabled": false,
+              }
+            }
+            accessible={true}
+            focusable={true}
+            hitSlop={
+              Object {
+                "bottom": 6,
+                "left": 6,
+                "right": 6,
+                "top": 6,
+              }
+            }
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "overflow": "hidden",
+                },
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "justifyContent": "center",
+                    "margin": 6,
+                    "overflow": "hidden",
+                  },
+                  Object {
+                    "borderRadius": 18,
+                    "height": 36,
+                    "width": 36,
+                  },
+                  undefined,
+                  undefined,
+                ],
+              ]
+            }
+          >
+            <View>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "justifyContent": "center",
+                    },
+                    Object {
+                      "height": 24,
+                      "width": 24,
+                    },
+                  ]
+                }
+              >
+                <View
+                  collapsable={false}
+                  nativeID="animatedComponent"
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "opacity": 1,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "transform": Array [
+                        Object {
+                          "rotate": "0deg",
+                        },
+                      ],
+                    }
+                  }
+                >
+                  <Text
+                    accessibilityElementsHidden={true}
+                    allowFontScaling={false}
+                    importantForAccessibility="no-hide-descendants"
+                    pointerEvents="none"
+                    selectable={false}
+                    style={
+                      Array [
+                        Object {
+                          "color": "#b73109",
+                          "fontSize": 24,
+                        },
+                        Array [
+                          Object {
+                            "lineHeight": 24,
+                            "transform": Array [
+                              Object {
+                                "scaleX": 1,
+                              },
+                            ],
+                          },
+                          Object {
+                            "backgroundColor": "transparent",
+                          },
+                        ],
+                        Object {
+                          "fontFamily": "Material Design Icons",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                        Object {},
+                      ]
+                    }
+                  >
+                    󰂜
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+          <Text
+            collapsable={false}
+            nativeID="animatedComponent"
+            numberOfLines={1}
+            style={
+              Object {
+                "alignSelf": "flex-end",
+                "backgroundColor": "#b73109",
+                "borderRadius": 8,
+                "color": "#fcf9e5",
+                "fontFamily": "System",
+                "fontSize": 8,
+                "fontWeight": "400",
+                "height": 16,
+                "lineHeight": 16,
+                "minWidth": 16,
+                "opacity": 1,
+                "overflow": "hidden",
+                "paddingHorizontal": 4,
+                "position": "absolute",
+                "right": 10,
+                "textAlign": "center",
+                "textAlignVertical": "center",
+                "top": 6,
+              }
+            }
+          >
+            0
+          </Text>
+        </View>
+      </View>
+    </RCTSafeAreaView>
+    <BVLinearGradient
+      colors={
+        Array [
+          4293968983,
+          4289300768,
+        ]
+      }
+      endPoint={
+        Object {
+          "x": 1,
+          "y": 1,
+        }
+      }
+      locations={null}
+      startPoint={
+        Object {
+          "x": 0.2,
+          "y": 1,
+        }
+      }
+      style={
+        Object {
+          "paddingVertical": 1,
+        }
+      }
+    />
+  </View>
+  <Text
+    style={
+      Object {
+        "color": "#573802",
+        "fontSize": 16,
+        "fontWeight": "bold",
+        "marginLeft": 15,
+        "marginVertical": 15,
+      }
+    }
+  >
+    Notification
+  </Text>
+  <View
+    accessibilityRole="progressbar"
+    accessibilityState={
+      Object {
+        "busy": true,
+      }
+    }
+    accessible={true}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      collapsable={false}
+      style={
+        Object {
+          "height": 24,
+          "opacity": 1,
+          "width": 24,
+        }
+      }
+    >
+      <View
+        collapsable={false}
+        nativeID="animatedComponent"
+        style={
+          Object {
+            "alignItems": "center",
+            "bottom": 0,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 24,
+              "transform": Array [
+                Object {
+                  "rotate": "45deg",
+                },
+              ],
+              "width": 24,
+            }
+          }
+        >
+          <View
+            collapsable={false}
+            style={
+              Object {
+                "height": 12,
+                "overflow": "hidden",
+                "width": 24,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "height": 24,
+                  "transform": Array [
+                    Object {
+                      "translateY": 0,
+                    },
+                    Object {
+                      "rotate": "-165deg",
+                    },
+                  ],
+                  "width": 24,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  Object {
+                    "height": 12,
+                    "overflow": "hidden",
+                    "width": 24,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  nativeID="animatedComponent"
+                  style={
+                    Object {
+                      "borderColor": "#573802",
+                      "borderRadius": 12,
+                      "borderWidth": 2.4,
+                      "height": 24,
+                      "width": 24,
+                    }
+                  }
+                />
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        collapsable={false}
+        nativeID="animatedComponent"
+        style={
+          Object {
+            "alignItems": "center",
+            "bottom": 0,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 24,
+              "transform": Array [
+                Object {
+                  "rotate": "45deg",
+                },
+              ],
+              "width": 24,
+            }
+          }
+        >
+          <View
+            collapsable={false}
+            style={
+              Object {
+                "height": 12,
+                "overflow": "hidden",
+                "top": 12,
+                "width": 24,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "height": 24,
+                  "transform": Array [
+                    Object {
+                      "translateY": -12,
+                    },
+                    Object {
+                      "rotate": "345deg",
+                    },
+                  ],
+                  "width": 24,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  Object {
+                    "height": 12,
+                    "overflow": "hidden",
+                    "width": 24,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  nativeID="animatedComponent"
+                  style={
+                    Object {
+                      "borderColor": "#573802",
+                      "borderRadius": 12,
+                      "borderWidth": 2.4,
+                      "height": 24,
+                      "width": 24,
+                    }
+                  }
+                />
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
