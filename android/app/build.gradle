@@ -88,7 +88,7 @@ android {
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 9013
+        versionCode 9014
         versionName "1.0018"
         missingDimensionStrategy 'react-native-camera', 'general'
         // manifestPlaceholders = [
