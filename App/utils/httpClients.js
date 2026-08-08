@@ -14,6 +14,20 @@ const axiosInstace = axios.create({
   // adapter: fetchAdapter
 });
 const { dispatch } = store;
+
+const logAxiosError = (label, error) => {
+  const config = error?.config || {};
+  MyConsole.log(label, {
+    url: (config.baseURL || '') + (config.url || ''),
+    method: config.method,
+    params: config.params,
+    payload: config.data,
+    status: error?.response?.status,
+    responseData: error?.response?.data,
+    message: error?.message,
+  });
+};
+
 axiosInstace.interceptors.request.use(
   async config => {
     dispatch(loading(true));
@@ -27,7 +41,7 @@ axiosInstace.interceptors.request.use(
     return config;
   },
   error => {
-    MyConsole.log('base error', error.response);
+    logAxiosError('base request error', error);
     dispatch(loading(false));
     return Promise.reject(error);
   },
@@ -136,7 +150,7 @@ axiosInstace.interceptors.response.use(
     //   islogedIn = true;
     // }
 
-    MyConsole.log('baseerror', error.response);
+    logAxiosError('base response error', error);
     dispatch(loading(false));
     return Promise.reject(error);
   },
