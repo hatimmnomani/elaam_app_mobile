@@ -72,7 +72,7 @@ export const downloadFile = (fileUrl, props) => {
   let options = {
     fileCache: true,
     addAndroidDownloads: {
-      path: RootDir + '/Elaam-Doc' + '.png',
+      path: RootDir + '/Aelaam-Doc' + '.png',
       description: 'downloading file...',
       notification: true,
       // useDownloadManager works with Android only
@@ -122,7 +122,7 @@ const requestStoragePermission = async fileUrl => {
         PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
         {
           title: 'Storage Permission Required',
-          message: 'Elaam app needs access to your storage to download files.',
+          message: 'Aelaam app needs access to your storage to download files.',
           buttonNeutral: 'Ask Me Later',
           buttonNegative: 'Cancel',
           buttonPositive: 'OK',

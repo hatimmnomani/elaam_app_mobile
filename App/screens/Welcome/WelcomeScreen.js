@@ -250,7 +250,7 @@ const Welcome = props => {
                 },
               ]}
             >
-              ELAAM
+              AELAAM
             </Text>
           </View>
           <View style={styles.btn}>

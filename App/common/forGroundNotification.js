@@ -18,8 +18,8 @@ const forGroundNotification = () => {
         PushNotification.createChannel(
           {
             channelId: '120993456', // (required)
-            channelName: 'Elaam', // (required)
-            channelDescription: 'elaam elam', // (optional) default: undefined.
+            channelName: 'Aelaam', // (required)
+            channelDescription: 'aelaam aelam', // (optional) default: undefined.
             playSound: true, // (optional) default: true
             soundName: 'default', // (optional) See `soundName` parameter of `localNotification` function
             importance: Importance.HIGH, // (optional) default: Importance.HIGH. Int value of the Android notification importance

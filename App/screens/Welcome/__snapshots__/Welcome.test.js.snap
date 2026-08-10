@@ -280,7 +280,7 @@ exports[`Welcome Screen Component should WELCOME Text is available 1`] = `
             }
           }
         >
-          ELAAM
+          AELAAM
         </Text>
       </View>
       <View

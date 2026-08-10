@@ -9,9 +9,9 @@ const ElaamApplicationButton = ({buttonText, onPress}) => {
       onPress();
     } else {
       Alert.alert(
-        'Elaam Application',
-        'Opening Elaam Application...',
-        [{text: 'OK', onPress: () => console.log('Elaam Application pressed')}]
+        'Aelaam Application',
+        'Opening Aelaam Application...',
+        [{text: 'OK', onPress: () => console.log('Aelaam Application pressed')}]
       );
     }
   };

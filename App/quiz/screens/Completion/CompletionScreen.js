@@ -38,8 +38,8 @@ const CompletionScreen = () => {
 
   const handleApplicationPress = () => {
     Alert.alert(
-      'Elaam Application',
-      'Congratulations! Opening the main Elaam Application.',
+      'Aelaam Application',
+      'Congratulations! Opening the main Aelaam Application.',
       [
         {
           text: 'Continue',

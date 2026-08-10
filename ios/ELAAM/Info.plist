@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>ELAAM</string>
+	<string>AELAAM</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -55,7 +55,7 @@
 	<key>NSCalendarsUsageDescription</key>
 	<string>This app may request access to your calendar to manage or display event-related information.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Elaam requires to access your phone’s camera to scan barcodes</string>
+	<string>Aelaam requires to access your phone’s camera to scan barcodes</string>
 	<key>NSContactsUsageDescription</key>
 	<string>This app may request access to your contacts to identify and connect users when needed.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>

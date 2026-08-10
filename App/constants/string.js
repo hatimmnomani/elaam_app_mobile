@@ -48,9 +48,9 @@ const STRING = {
 
   /* Login Screen */
 
-  Copyright: '© Elaam ' + new Date().getFullYear() + ' All rights reserved |',
+  Copyright: '© Aelaam ' + new Date().getFullYear() + ' All rights reserved |',
   LOGIN: 'LOGIN',
-  LoginDesc: 'By logging in, you are agreeing Elaam’s T&C.',
+  LoginDesc: 'By logging in, you are agreeing Aelaam’s T&C.',
   ForgetPassword: 'Forgot Password ?',
   RememberMe: 'Remember Me',
   ITSIDMsg: 'ITS ID should be 8 digits ',
@@ -71,10 +71,10 @@ const STRING = {
   PrivacyPolicy: 'Privacy Policy',
   RedeemTxt: 'REDEEM YOUR TROPHY',
   AchieveTxt: 'MY ACHIEVEMENTS',
-  cameraPermission: 'Allow elaam to access your camera',
-  galleryHeadingPermission: 'Allow Elaam to access your gallery',
+  cameraPermission: 'Allow aelaam to access your camera',
+  galleryHeadingPermission: 'Allow Aelaam to access your gallery',
   galleryDescPermission:
-    'Elaam need to access your phones photo library to upload and select barcode photo.',
+    'Aelaam need to access your phones photo library to upload and select barcode photo.',
 
   /* Screen Name*/
   NotificationScreen: 'NotificationScreen',
