@@ -17,9 +17,9 @@ class MainActivity : ReactActivity() {
 //  @Override
 //  protected String getMainComponentName() {
 //
-//    return "ELAAM";
+//    return "AELAAM";
 //  }
-    override fun getMainComponentName(): String = "ELAAM"
+    override fun getMainComponentName(): String = "AELAAM"
 
 
 
