@@ -14,3 +14,6 @@ gem 'bigdecimal'
 gem 'logger'
 gem 'benchmark'
 gem 'mutex_m'
+# CFPropertyList (a cocoapods-core dependency) still does `require 'kconv'`,
+# removed from stdlib in Ruby 3.4+; shim satisfies the require (unused otherwise).
+gem 'kconv', path: 'vendor/kconv_shim'

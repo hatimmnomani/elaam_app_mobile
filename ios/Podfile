@@ -67,6 +67,21 @@ target 'ELAAM' do
     react_native_post_install(installer,
     config[:reactNativePath],
     :mac_catalyst_enabled => false)
+
+    # fmt 11.0.2 (pinned by React Native 0.81) is genuinely broken with this
+    # Xcode/Clang's consteval evaluation ("call to consteval function ... is
+    # not a constant expression"). base.h #defines FMT_USE_CONSTEVAL
+    # unconditionally, so a compiler -D flag can't override it — patch the
+    # header directly to force it off until RN bumps fmt.
+    fmt_base_header = File.join(installer.sandbox.pod_dir('fmt'), 'include/fmt/base.h')
+    if File.exist?(fmt_base_header)
+      content = File.read(fmt_base_header)
+      patched = content.gsub(/#(\s*)define(\s+)FMT_USE_CONSTEVAL\s+1/, '#\1define\2FMT_USE_CONSTEVAL 0')
+      if patched != content
+        File.chmod(0644, fmt_base_header)
+        File.write(fmt_base_header, patched)
+      end
+    end
   end
   bitcode_strip_path = `xcrun --find bitcode_strip`.chop!
      def strip_bitcode_from_framework(bitcode_strip_path, framework_relative_path)
