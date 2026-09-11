@@ -101,6 +101,7 @@ const STRING = {
 
   Quiz: 'Quiz',
   IstefadaIlmiyaQuiz: 'Istefada Ilmiya Quiz',
+  QuizWebScreen: 'QuizWebScreen',
 };
 export default STRING;
 

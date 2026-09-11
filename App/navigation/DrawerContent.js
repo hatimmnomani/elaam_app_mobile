@@ -4,19 +4,19 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
 import {
-  Image,
-  ImageBackground,
-  Platform,
-  Pressable,
-  StyleSheet,
-  Text,
-  View,
+   Image,
+   ImageBackground,
+   Platform,
+   Pressable,
+   StyleSheet,
+   Text,
+   View,
 } from 'react-native';
 
 import {
-  DrawerActions,
-  useIsFocused,
-  useNavigation,
+   DrawerActions,
+   useIsFocused,
+   useNavigation,
 } from '@react-navigation/native';
 // import WithLocalSvg from 'react-native-svg/css';
 
@@ -29,15 +29,16 @@ import publicIP from 'react-native-public-ip';
 import Entypo from 'react-native-vector-icons/Entypo';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  Active_Menu_Bar_png,
-  BgPattern,
-  Elaam_Logo,
-  Stamp,
-  fmb,
-  hasana,
-  hifz,
+   Active_Menu_Bar_png,
+   BgPattern,
+   Elaam_Logo,
+   Stamp,
+   fmb,
+   hasana,
+   hifz,
 } from '../assets';
 import CatalogueIcon from '../assets/images/Elaam_Icons/CatalogueIcon';
+import GoldTrophy from '../assets/images/Elaam_Icons/GoldTrophy';
 import DashboardIcon from '../assets/images/Elaam_Icons/DashboardIcon';
 import NotificationIcon from '../assets/images/Elaam_Icons/NotificationIcon';
 import Scan_icon from '../assets/images/Elaam_Icons/Privacy_policy_icon';
@@ -660,6 +661,52 @@ export const DrawerContent = props => {
                 </View>
               </Pressable>
             ) : null}
+
+            <Pressable
+              style={{
+                backgroundColor:
+                  d_tab_type === string.QuizWebScreen
+                    ? Color.drawarActiveTintColor
+                    : null,
+                padding: 17,
+                justifyContent: 'center',
+              }}
+              onPress={() => {
+                navigation.navigate(
+                  showMenu
+                    ? string.MuminDrawerNavigators
+                    : string.ApproveDrawerNavigators,
+                  { screen: string.QuizWebScreen },
+                );
+              }}
+            >
+              {d_tab_type === string.QuizWebScreen ? (
+                <Image
+                  style={{
+                    resizeMode: 'cover',
+                    position: 'absolute',
+                    height: '185%',
+                  }}
+                  source={Active_Menu_Bar_png}
+                />
+              ) : null}
+              <View style={{ flexDirection: 'column', alignItems: 'center' }}>
+                <GoldTrophy height={35} width={35} />
+                <Text
+                  style={{
+                    color:
+                      d_tab_type === string.QuizWebScreen
+                        ? Color.drawarActiveTextColor
+                        : Color.drawerInactiveTextColor,
+                    fontSize: font.fontSizes16,
+                    fontWeight: '500',
+                  }}
+                >
+                  {string.Quiz}
+                </Text>
+              </View>
+            </Pressable>
+
             {showMenu === true ? (
               <Pressable
                 style={{

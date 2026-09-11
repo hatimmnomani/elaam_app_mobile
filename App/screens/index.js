@@ -13,3 +13,4 @@ export {default as ApproveCatalogue} from './ApproveCatalogue/ApproveCatalogue';
 export {default as SuperAdminScreen} from './SuperAdminDashboard/SuperAdminScreen';
 export {default as NiyatList} from './SuperAdminDashboard/NiyatList';
 export {default as WebScreen} from './WebScreen/WebScreen';
+export {default as QuizWebScreen} from './QuizWebScreen/QuizWebScreen';

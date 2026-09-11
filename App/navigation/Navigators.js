@@ -16,6 +16,7 @@ import {
   SuperAdminScreen,
   NiyatList,
   WebScreen,
+  QuizWebScreen,
 } from '../screens';
 import { DrawerContent } from './DrawerContent';
 import { ActiveNiyatList } from '../screens';
@@ -135,6 +136,18 @@ export const MuminDrawerNavigators = props => {
         options={{ headerShown: false }}
       />
       <MuminDrawer.Screen
+        name={string.QuizWebScreen}
+        component={QuizWebScreen}
+        options={{
+          headerShown: true,
+          title: string.Quiz,
+          headerTintColor: Color.titleColor,
+          headerStyle: {
+            backgroundColor: Color.bgColor,
+          },
+        }}
+      />
+      <MuminDrawer.Screen
         name={string.Scanner}
         component={Scanner}
         options={{
@@ -208,6 +221,18 @@ export const ApproveDrawerNavigators = props => {
         name={string.RewardList}
         component={RewardList}
         options={{ headerShown: false }}
+      />
+      <ApproveDrawer.Screen
+        name={string.QuizWebScreen}
+        component={QuizWebScreen}
+        options={{
+          headerShown: true,
+          title: string.Quiz,
+          headerTintColor: Color.titleColor,
+          headerStyle: {
+            backgroundColor: Color.bgColor,
+          },
+        }}
       />
       <ApproveDrawer.Screen
         name={string.Scanner}

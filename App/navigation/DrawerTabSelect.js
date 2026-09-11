@@ -34,6 +34,8 @@ export const drawerTabSelect = (dispatch, screenName, screenTitle) => {
       ? 'Notification'
       : screenName == string.PrivacyPolicy
       ? string.PrivacyPolicy
+      : screenName == string.QuizWebScreen
+      ? string.QuizWebScreen
       : '';
 
   dispatch(ReduxActionCreators.d_tab_type(drawerTabType));
