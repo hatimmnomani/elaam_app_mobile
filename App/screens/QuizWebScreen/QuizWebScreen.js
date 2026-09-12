@@ -4,6 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { WebView } from 'react-native-webview';
 import { Color } from '../../constants';
 import { MyAsyncStorage } from '../../utils/MyAsyncStorage';
+import SecureScreen from '../../quiz/components/SecureScreen';
 
 const QUIZ_URL = 'https://quiz.aelaam53.com/#token=';
 
@@ -25,18 +26,20 @@ const QuizWebScreen = () => {
   }
 
   return (
-    <SafeAreaView style={styles.container} edges={['bottom']}>
-      <WebView
-        source={{ uri: `${QUIZ_URL}${token}` }}
-        startInLoadingState
-        renderLoading={() => (
-          <View style={styles.loader}>
-            <ActivityIndicator size="large" color={Color.titleColor} />
-          </View>
-        )}
-        style={styles.webview}
-      />
-    </SafeAreaView>
+    <SecureScreen>
+      <SafeAreaView style={styles.container} edges={['bottom']}>
+        <WebView
+          source={{ uri: `${QUIZ_URL}${token}` }}
+          startInLoadingState
+          renderLoading={() => (
+            <View style={styles.loader}>
+              <ActivityIndicator size="large" color={Color.titleColor} />
+            </View>
+          )}
+          style={styles.webview}
+        />
+      </SafeAreaView>
+    </SecureScreen>
   );
 };
 
