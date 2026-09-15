@@ -30,7 +30,7 @@ import { Color, string } from '../../constants/index';
 import { selectTime } from '../../constants/string';
 import DashBoardCard from '../../quiz/components/QuizDescriptionPage/DashBoardCard';
 import QuizButton from '../../quiz/components/QuizDescriptionPage/QuizButton';
-import { checkQuizAccess } from '../../quiz/redux/actions';
+import { checkIstefadaStatus, checkQuizAccess } from '../../quiz/redux/actions';
 import { ReduxActionCreators } from '../../redux/ActionsCreators';
 import MuminDashboard from '../../services/muminDashboard';
 import { MyAsyncStorage } from '../../utils/MyAsyncStorage';
@@ -55,7 +55,12 @@ const MuminScreen = () => {
   const muminDuration = useSelector(
     s => s.CommonReducer.mumin_selected_duration,
   );
-  const { accessAllowed } = useSelector(state => state.quiz);
+  const { accessAllowed, istefadaEnrolled, istefadaActive } = useSelector(
+    state => state.quiz,
+  );
+  // Istefada quiz card is only shown when the user is enrolled AND the event
+  // is active (fail-closed: stays hidden unless the status call succeeds)
+  const istefadaAllowed = istefadaEnrolled && istefadaActive;
 
   // Local state for component (initialized from Redux)
   const [startDate, setStartDate] = useState(muminStartDate);
@@ -110,6 +115,51 @@ const MuminScreen = () => {
       clearInterval(intervalId);
     };
   }, [focused, accessAllowed, dispatch]);
+
+  // Istefada quiz status polling effect (same pattern as quiz access polling)
+  useEffect(() => {
+    if (!focused || istefadaAllowed || !QUIZ_ACCESS_CONFIG.ENABLED) {
+      return;
+    }
+
+    MyConsole.log(
+      'Starting istefada status polling every',
+      QUIZ_ACCESS_CONFIG.POLL_INTERVAL / 1000,
+      'seconds',
+    );
+
+    const pollIstefadaStatus = () => {
+      if (istefadaAllowed) {
+        MyConsole.log('Istefada quiz available, stopping polling');
+        return;
+      }
+
+      dispatch(checkIstefadaStatus())
+        .then(status => {
+          if (status?.enrolled && status?.active) {
+            MyConsole.log('Istefada quiz became available during polling');
+          }
+        })
+        .catch(error => {
+          MyConsole.log('Error checking istefada status:', error);
+        });
+    };
+
+    // Initial check
+    pollIstefadaStatus();
+
+    // Set up interval for polling
+    const istefadaIntervalId = setInterval(
+      pollIstefadaStatus,
+      QUIZ_ACCESS_CONFIG.POLL_INTERVAL,
+    );
+
+    // Cleanup function
+    return () => {
+      MyConsole.log('Stopping istefada status polling');
+      clearInterval(istefadaIntervalId);
+    };
+  }, [focused, istefadaAllowed, dispatch]);
 
   // Main data loading effect
   useEffect(() => {
@@ -340,6 +390,41 @@ const MuminScreen = () => {
                       </Text>
                     </LinearGradient>
                   </TouchableOpacity> */}
+                </Card.Content>
+                {/* </Card> */}
+              </View>
+            </LinearGradient>
+          )}
+
+          {istefadaAllowed && (
+            <LinearGradient
+              colors={Color.gradientColor2}
+              start={{ x: 0.2, y: 1.0 }}
+              end={{ x: 1.0, y: 1.0 }}
+              style={[
+                styles.linearGradientCard,
+                { marginVertical: windowWidth * 0.007 },
+              ]}
+            >
+              <View style={styles.card}>
+                {/* <Card style={styles.card}> */}
+                <Card.Content style={styles.cardView}>
+                  <DashBoardCard
+                    image={require('../../quiz/assets/istefada.png')}
+                  />
+
+                  {/* Istefada Quiz Button */}
+
+                  <View style={styles.buttonContainer}>
+                    <QuizButton
+                      onPress={() => {
+                        navigation.navigate(string.QuizWebScreen);
+                      }}
+                      labelArabic="مسابقة الاستفتاء العلمي"
+                      sublabel={string.IstefadaIlmiyaQuiz}
+                      fontSize={22}
+                    />
+                  </View>
                 </Card.Content>
                 {/* </Card> */}
               </View>

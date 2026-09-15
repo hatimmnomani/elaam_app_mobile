@@ -4,7 +4,14 @@ import LinearGradient from 'react-native-linear-gradient';
 import { Color, font } from '../../../../App/constants';
 import { quizTheme } from '../../theme/quizTheme';
 
-const QuizButton = ({ onPress, style }) => {
+const QuizButton = ({
+  onPress,
+  style,
+  label = 'Quiz',
+  labelArabic = 'مسابقة',
+  sublabel,
+  fontSize = 32,
+}) => {
   return (
     <Pressable
       style={[styles.buttonContainer, style]}
@@ -18,9 +25,22 @@ const QuizButton = ({ onPress, style }) => {
         end={{ x: 1, y: 0 }}
       >
         <View style={styles.gradientTextContainer}>
-          <Text style={styles.buttonText}>Quiz</Text>
-          <Text style={styles.separator}>{'  '}</Text>
-          <Text style={styles.buttonTextArabic}>مسابقة</Text>
+          {sublabel ? (
+            <View style={styles.stackedTextContainer}>
+              <Text style={[styles.buttonTextArabic, { fontSize }]}>
+                {labelArabic}
+              </Text>
+              <Text style={styles.buttonSubText}>{sublabel}</Text>
+            </View>
+          ) : (
+            <>
+              <Text style={[styles.buttonText, { fontSize }]}>{label}</Text>
+              <Text style={styles.separator}>{'  '}</Text>
+              <Text style={[styles.buttonTextArabic, { fontSize }]}>
+                {labelArabic}
+              </Text>
+            </>
+          )}
         </View>
       </LinearGradient>
     </Pressable>
@@ -74,6 +94,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  stackedTextContainer: {
+    alignItems: 'center',
+  },
+  buttonSubText: {
+    fontSize: 14,
+    fontWeight: '500',
+    color: Color.white,
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    writingDirection: 'ltr',
+    includeFontPadding: false,
+    fontFamily: quizTheme.typography.fontFamily,
   },
   separator: {
     width: 8,

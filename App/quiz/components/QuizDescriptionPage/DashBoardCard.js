@@ -2,12 +2,12 @@ import FastImage from '@d11/react-native-fast-image';
 import { StyleSheet, View } from 'react-native';
 import { appScreen } from '../../../utils/responsive/SizeUtil';
 
-const DashBoardCard = ({ style }) => {
+const DashBoardCard = ({ style, image }) => {
   console.log('DashBoardCard rendered');
   return (
     <View style={[styles.container, style]}>
       <FastImage
-        source={require('../../assets/calibary_pannel.png')}
+        source={image || require('../../assets/calibary_pannel.png')}
         style={[styles.panelImage, style]}
         resizeMode="contain"
       />
