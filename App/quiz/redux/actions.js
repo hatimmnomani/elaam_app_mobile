@@ -1,7 +1,11 @@
 import { showAlert } from '../../common/CustomAlert';
+import httpClient from '../../utils/httpClients';
 import { MyAsyncStorage } from '../../utils/MyAsyncStorage';
 import QuizService from '../services/quizService';
 import {
+   ISTEFADA_STATUS_ERROR,
+   ISTEFADA_STATUS_LOADING,
+   ISTEFADA_STATUS_SUCCESS,
    QUIZ_ACCESS_ERROR,
    QUIZ_ACCESS_LOADING,
    QUIZ_ACCESS_SUCCESS,
@@ -127,6 +131,28 @@ export const checkQuizAccess = itsIdParam => async dispatch => {
       payload: error?.response?.data?.message || 'Failed to check quiz access',
     });
     return false;
+  }
+};
+
+// Check Istefada quiz status for current user (fail-closed: card stays
+// hidden on any error / non-2xx / missing fields)
+export const checkIstefadaStatus = () => async dispatch => {
+  try {
+    dispatch({ type: ISTEFADA_STATUS_LOADING });
+    const { data } = await httpClient.get('/api/quiz/istefada/status');
+    const status = {
+      enrolled: !!(data?.data?.enrolled ?? data?.enrolled),
+      active: !!(data?.data?.active ?? data?.active),
+    };
+    dispatch({ type: ISTEFADA_STATUS_SUCCESS, payload: status });
+    return status;
+  } catch (error) {
+    dispatch({
+      type: ISTEFADA_STATUS_ERROR,
+      payload:
+        error?.response?.data?.message || 'Failed to check istefada status',
+    });
+    return { enrolled: false, active: false };
   }
 };
 

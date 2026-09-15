@@ -1,4 +1,7 @@
 import {
+  ISTEFADA_STATUS_LOADING,
+  ISTEFADA_STATUS_SUCCESS,
+  ISTEFADA_STATUS_ERROR,
   QUIZ_LOADING,
   QUIZ_LOADED,
   QUIZ_ERROR,
@@ -32,6 +35,11 @@ const initialState = {
   accessLoading: false,
   accessAllowed: false,
   accessError: null,
+  // Istefada quiz status state (fail-closed: hidden unless enrolled && active)
+  istefadaLoading: false,
+  istefadaEnrolled: false,
+  istefadaActive: false,
+  istefadaError: null,
   // User quizzes list
   quizzesLoading: false,
   quizzes: [],
@@ -65,6 +73,31 @@ const quizReducer = (state = initialState, action) => {
         accessLoading: false,
         accessAllowed: false,
         accessError: action.payload,
+      };
+
+    case ISTEFADA_STATUS_LOADING:
+      return {
+        ...state,
+        istefadaLoading: true,
+        istefadaError: null,
+      };
+
+    case ISTEFADA_STATUS_SUCCESS:
+      return {
+        ...state,
+        istefadaLoading: false,
+        istefadaEnrolled: !!action.payload?.enrolled,
+        istefadaActive: !!action.payload?.active,
+        istefadaError: null,
+      };
+
+    case ISTEFADA_STATUS_ERROR:
+      return {
+        ...state,
+        istefadaLoading: false,
+        istefadaEnrolled: false,
+        istefadaActive: false,
+        istefadaError: action.payload,
       };
 
     case QUIZ_LOADING:
